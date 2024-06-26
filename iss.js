@@ -28,8 +28,6 @@ const fetchMyIP = function(callback) {
       return;
     }
 
-    // debugging step
-    console.log(body);
     // the body contains the IP address sent back from the ipify API server, parse it
     const ip = body;
 
