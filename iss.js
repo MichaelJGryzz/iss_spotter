@@ -12,7 +12,7 @@ const needle = require('needle');
 
 const fetchMyIP = function(callback) {
   // use request to fetch IP address from JSON API
-  const url = `https://api.ipify.org?formal=json`;
+  const url = `https://api.ipify.org?format=json`;
 
   // fetch the IP address data from ipify API
   needle.get(url, (error, response, body) => {
@@ -29,7 +29,7 @@ const fetchMyIP = function(callback) {
     }
 
     // the body contains the IP address sent back from the ipify API server, parse it
-    const ip = body;
+    const ip = body.ip;
 
     // pass the IP address to the callback function
     callback(null, ip);
