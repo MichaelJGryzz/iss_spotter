@@ -14,10 +14,17 @@ const { nextISSTimesForMyLocation } = require('./iss');
  */
 
 const printFlyOverTimes = function(flyOverTimes) {
-  for (const flyOver of flyOverTimes) {
+  // iterate over each flyover time in the array
+  for (const flyOver of flyOverTimes) {   
+
+    // create a new Date object for risetime
     const datetime = new Date(0);
     datetime.setUTCSeconds(flyOver.risetime);
+
+    // get the duration of the flyover
     const duration = flyOver.duration;
+
+    // log the correctly formatted date and duration of the flyovers
     console.log(`Next flyover at ${datetime} for ${duration} seconds!`);
   }
 };
