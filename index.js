@@ -29,10 +29,15 @@ const printFlyOverTimes = function(flyOverTimes) {
   }
 };
 
-nextISSTimesForMyLocation((error, flyOverTimes) => {
+/*nextISSTimesForMyLocation((error, flyOverTimes) => {
   if (error) {
     return console.log("It didn't work!", error);
   }
   // success, print out the details!
   printFlyOverTimes(flyOverTimes);
 });
+*/
+
+
+// export printFlyOverTimes function
+module.exports = { printFlyOverTimes };
